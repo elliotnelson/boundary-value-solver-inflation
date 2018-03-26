@@ -1,1 +1,5 @@
-# test_repo
+This repository is a collection of functions used to evaluate the probability P of a given three-dimensional scalar field configuration sigma_f(x1,x2,x3), along with its functional gradient in configuration space, dP/d(sigma_f). The probability is related to an action functional, P=exp(-action), which is computed by a function "action". In the underlying theory, the action is determined as an integral of scalar field values over both space and time, and evaluating it requires solving the equations of motion of the theory which determine the time-evolution of the scalar field, subject to a spatial boundary condition which fixes the final field configuration to be the particular configuration sigma_f(x1,x2,x3) whose probability we are evaluating. For this reason, we need "action" to call additional functions which iteratively implement the equations of motion.
+
+This repository makes use of several libraries (in particular for three-dimensional Fourier arrays) which are not included on GitHub.
+
+The boundary value problem is solved by calling ABsolution() and supplying it with various input parameters; ABsolution() calls various other functions in order to iteratively find a solution to the equations of motion, and to compute the action with that solution.
